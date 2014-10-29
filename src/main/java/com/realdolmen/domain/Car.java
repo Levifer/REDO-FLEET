@@ -15,6 +15,8 @@ public class Car {
 
     @ManyToOne
     private Model model;
+
+
     private Integer mileage;
     @Temporal(TemporalType.DATE)
     private Date carInUse;

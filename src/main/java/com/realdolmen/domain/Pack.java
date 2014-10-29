@@ -17,9 +17,6 @@ public class Pack {
     private BigDecimal upgrade;
     private BigDecimal downgrade;
 
-    @OneToOne
-    private Model model;
-
     @ManyToMany
     private List<Option> options;
 
@@ -78,12 +75,4 @@ public class Pack {
         return id;
     }
 
-    public Model getModel() {
-
-        return model;
-    }
-
-    public void setModel(Model model) {
-        this.model = model;
-    }
 }

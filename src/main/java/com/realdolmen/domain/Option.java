@@ -17,11 +17,6 @@ public class Option {
     private String description;
     private BigDecimal price;
 
-    @ManyToMany
-    private List<Pack> packs;
-
-    @ManyToOne
-    private CustomPack customPack;
 
     public Option() {
     }
@@ -69,20 +64,4 @@ public class Option {
         return id;
     }
 
-    public List<Pack> getPacks() {
-
-        return packs;
-    }
-
-    public void setPacks(List<Pack> packs) {
-        this.packs = packs;
-    }
-
-    public CustomPack getCustomPack() {
-        return customPack;
-    }
-
-    public void setCustomPack(CustomPack customPack) {
-        this.customPack = customPack;
-    }
 }
