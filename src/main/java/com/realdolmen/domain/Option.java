@@ -12,7 +12,7 @@ public class Option {
     @Id
     @GeneratedValue
     private Integer id;
-    private Type type;
+    private Enums.Type type;
     private String name;
     private String description;
     private BigDecimal price;
@@ -26,18 +26,18 @@ public class Option {
     public Option() {
     }
 
-    public Option(Type type, String name, String description, BigDecimal price) {
+    public Option(Enums.Type type, String name, String description, BigDecimal price) {
         this.type = type;
         this.name = name;
         this.description = description;
         this.price = price;
     }
 
-    public Type getType() {
+    public Enums.Type getType() {
         return type;
     }
 
-    public void setType(Type type) {
+    public void setType(Enums.Type type) {
         this.type = type;
     }
 
