@@ -35,4 +35,34 @@ public class Enums {
         }
     }
 
+    public enum Fuel{
+        DIESEL("Fuel.Diesel"),
+        Bezine("Fuel.Benzine");
+
+        private final String label;
+
+        Fuel(String label) {
+            this.label = label;
+        }
+
+        public String getLabel() {
+            return label;
+        }
+    }
+
+    public enum Type{
+        Interior("Type.Airco"),
+        Exterior("Type.Extrior");
+
+        private final String label;
+
+        Type(String label) {
+            this.label = label;
+        }
+
+        public String getLabel() {
+            return label;
+        }
+    }
+
 }

@@ -15,7 +15,7 @@ public class Model {
     private Integer id;
     private String brand;
     private String type;
-    private Fuel fuelType;
+    private Enums.Fuel fuelType;
     private Date year;
     private int quarter;
     private int minKm;
@@ -34,7 +34,7 @@ public class Model {
     public Model() {
     }
 
-    public Model(String brand, String type, Fuel fuelType, Date year, int quarter, Pack pack, int minKm, int maxKm, int deliveryTime, int fiscalHp, int co2, int category) {
+    public Model(String brand, String type, Enums.Fuel fuelType, Date year, int quarter, Pack pack, int minKm, int maxKm, int deliveryTime, int fiscalHp, int co2, int category) {
         this.brand = brand;
         this.type = type;
         this.fuelType = fuelType;
@@ -65,11 +65,11 @@ public class Model {
         this.type = type;
     }
 
-    public Fuel getFuelType() {
+    public Enums.Fuel getFuelType() {
         return fuelType;
     }
 
-    public void setFuelType(Fuel fuelType) {
+    public void setFuelType(Enums.Fuel fuelType) {
         this.fuelType = fuelType;
     }
 
