@@ -1,10 +1,9 @@
 package com.realdolmen.domain;
 
 import javax.annotation.Generated;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by TLAAU71 on 29/10/2014.
@@ -16,10 +15,10 @@ public class Model {
     private Integer id;
     private String brand;
     private String type;
-    private Fuel fuelType;
+    private Enums.Fuel fuelType;
+    @Temporal(TemporalType.DATE)
     private Date year;
-    private int quarter,
-    private Pack pack;
+    private int quarter;
     private int minKm;
     private int maxKm;
     private int deliveryTime;
@@ -27,10 +26,16 @@ public class Model {
     private int co2;
     private int category;
 
+    @OneToOne
+    private Pack pack;
+
+    @OneToMany
+    private List<Car> cars;
+
     public Model() {
     }
 
-    public Model(String brand, String type, Fuel fuelType, Date year, int quarter, Pack pack, int minKm, int maxKm, int deliveryTime, int fiscalHp, int co2, int category) {
+    public Model(String brand, String type, Enums.Fuel fuelType, Date year, int quarter, Pack pack, int minKm, int maxKm, int deliveryTime, int fiscalHp, int co2, int category) {
         this.brand = brand;
         this.type = type;
         this.fuelType = fuelType;
@@ -61,11 +66,11 @@ public class Model {
         this.type = type;
     }
 
-    public Fuel getFuelType() {
+    public Enums.Fuel getFuelType() {
         return fuelType;
     }
 
-    public void setFuelType(Fuel fuelType) {
+    public void setFuelType(Enums.Fuel fuelType) {
         this.fuelType = fuelType;
     }
 
@@ -139,5 +144,18 @@ public class Model {
 
     public void setCategory(int category) {
         this.category = category;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public List<Car> getCars() {
+
+        return cars;
+    }
+
+    public void setCars(List<Car> cars) {
+        this.cars = cars;
     }
 }
