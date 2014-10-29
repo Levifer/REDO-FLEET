@@ -16,6 +16,7 @@ public class Model {
     private String brand;
     private String type;
     private Enums.Fuel fuelType;
+    @Temporal(TemporalType.DATE)
     private Date year;
     private int quarter;
     private int minKm;
