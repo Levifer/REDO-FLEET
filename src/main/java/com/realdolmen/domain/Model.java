@@ -1,10 +1,9 @@
 package com.realdolmen.domain;
 
 import javax.annotation.Generated;
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.util.Date;
+import java.util.List;
 
 /**
  * Created by TLAAU71 on 29/10/2014.
@@ -18,14 +17,19 @@ public class Model {
     private String type;
     private Fuel fuelType;
     private Date year;
-    private int quarter,
-    private Pack pack;
+    private int quarter;
     private int minKm;
     private int maxKm;
     private int deliveryTime;
     private int fiscalHp;
     private int co2;
     private int category;
+
+    @OneToOne
+    private Pack pack;
+
+    @OneToMany
+    private List<Car> cars;
 
     public Model() {
     }
@@ -139,5 +143,18 @@ public class Model {
 
     public void setCategory(int category) {
         this.category = category;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public List<Car> getCars() {
+
+        return cars;
+    }
+
+    public void setCars(List<Car> cars) {
+        this.cars = cars;
     }
 }

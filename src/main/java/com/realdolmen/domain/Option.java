@@ -1,9 +1,8 @@
 package com.realdolmen.domain;
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
+import javax.persistence.*;
 import java.math.BigDecimal;
+import java.util.List;
 
 /**
  * Created by TLAAU71 on 29/10/2014.
@@ -17,6 +16,12 @@ public class Option {
     private String name;
     private String description;
     private BigDecimal price;
+
+    @ManyToMany
+    private List<Pack> packs;
+
+    @ManyToOne
+    private CustomPack customPack;
 
     public Option() {
     }
@@ -58,5 +63,26 @@ public class Option {
 
     public void setPrice(BigDecimal price) {
         this.price = price;
+    }
+
+    public Integer getId() {
+        return id;
+    }
+
+    public List<Pack> getPacks() {
+
+        return packs;
+    }
+
+    public void setPacks(List<Pack> packs) {
+        this.packs = packs;
+    }
+
+    public CustomPack getCustomPack() {
+        return customPack;
+    }
+
+    public void setCustomPack(CustomPack customPack) {
+        this.customPack = customPack;
     }
 }
