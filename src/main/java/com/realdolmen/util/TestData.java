@@ -3,6 +3,8 @@ package com.realdolmen.util;
 import com.realdolmen.domain.Enums;
 import com.realdolmen.domain.option.Option;
 import com.realdolmen.domain.pack.Pack;
+import com.realdolmen.domain.pack.PackService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.ApplicationListener;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.stereotype.Component;
@@ -19,11 +21,14 @@ import java.util.Random;
 public class TestData implements ApplicationListener<ContextRefreshedEvent> {
 
 
+    @Autowired
+    private PackService packService;
     @PersistenceContext
     private EntityManager entityManager;
 
     @Override
     public void onApplicationEvent(ContextRefreshedEvent contextRefreshedEvent) {
+
 
     }
 
@@ -59,8 +64,10 @@ public class TestData implements ApplicationListener<ContextRefreshedEvent> {
         entityManager.persist(option3);
         entityManager.persist(option4);
         entityManager.persist(option5);
+           
+        Pack pack = new Pack()
 
-     
+
     }
 
     public void insertCars() {
