@@ -5,6 +5,7 @@ import com.realdolmen.domain.pack.Pack;
 import com.realdolmen.domain.car.Car;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.*;
 import java.util.Date;
 import java.util.List;
 
@@ -12,25 +13,41 @@ import java.util.List;
  * Created by TLAAU71 on 29/10/2014.
  */
 @Entity
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement
 public class CarModel {
     @Id
     @GeneratedValue
+    @XmlTransient
     private Integer id;
+    @XmlElement
     private String brand;
+    @XmlElement
     private String type;
+    @XmlElement
     private Enums.Fuel fuelType;
     @Temporal(TemporalType.DATE)
+    @XmlElement
     private Date year;
+    @XmlElement
     private int quarter;
+    @XmlElement
     private int minKm;
+    @XmlElement
     private int maxKm;
+    @XmlElement
     private int deliveryTime;
+    @XmlElement
     private int fiscalHp;
+    @XmlElement
     private int co2;
+    @XmlElement
     private int category;
+    @XmlElement
     private String imageUrl;
 
     @OneToOne
+    @XmlElement
     private Pack pack;
 
 

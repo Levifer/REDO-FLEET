@@ -3,24 +3,31 @@ package com.realdolmen.domain.car;
 import com.realdolmen.domain.carmodel.CarModel;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.*;
 import java.util.Date;
 
 /**
  * Created by TLAAU71 on 29/10/2014.
  */
 @Entity
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement
 public class Car {
 
     @Id
     @GeneratedValue
+    @XmlTransient
     private Integer id;
 
     @ManyToOne
+    @XmlElement
     private CarModel model;
 
-
+    @XmlElement
     private Integer mileage;
+
     @Temporal(TemporalType.DATE)
+    @XmlElement
     private Date carInUse;
 
 

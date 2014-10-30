@@ -32,6 +32,7 @@ public class Employee {
     @XmlElement
     private Integer category;
     @OneToMany
+    @XmlElement
     private List<Car> cars;
     @Enumerated(EnumType.STRING)
     @XmlElement
