@@ -4,4 +4,4 @@
     Something went terribly wrong!
 </h2>
 <p>If you want to, you can look up this HTTP-code: <em>${errorCode}</em>. Good luck!</p>
-<p>I guess you should go back to the <a href="${homeUrl}">Home page</a></p>
+<p>I guess you should go back to the <a href="${homeUrl}">home page</a></p>
