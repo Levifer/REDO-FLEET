@@ -3,6 +3,7 @@ package com.realdolmen.domain.pack;
 import com.realdolmen.domain.option.Option;
 
 import javax.persistence.*;
+import javax.xml.bind.annotation.*;
 import java.math.BigDecimal;
 import java.util.List;
 
@@ -10,16 +11,24 @@ import java.util.List;
  * Created by TLAAU71 on 29/10/2014.
  */
 @Entity
+@XmlAccessorType(XmlAccessType.FIELD)
+@XmlRootElement
 public class Pack {
     @Id
     @GeneratedValue
+    @XmlTransient
     private Integer id;
+    @XmlElement
     private BigDecimal price;
+    @XmlElement
     private BigDecimal benefitPrice;
+    @XmlElement
     private BigDecimal upgrade;
+    @XmlElement
     private BigDecimal downgrade;
 
     @ManyToMany
+    @XmlElement
     private List<Option> options;
 
     public Pack() {
