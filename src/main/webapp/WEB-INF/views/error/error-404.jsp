@@ -15,8 +15,7 @@
         <h1>
             You seem to have misplaced something...
         </h1>
-        <!--<p>If you want to, you can look up this HTTP-code: <em>${errorCode}</em>. Good luck!</p>-->
-        <p>If you want to, you can look up this HTTP-code: [something]. Good luck!</p>
+        <p>If you want to, you can look up this HTTP-code: <em>404</em>. Good luck!</p>
         <script type="application/javascript" src="<%=request.getContextPath() %>/resources/js/bootstrap.js"></script>
     </body>
 </html>

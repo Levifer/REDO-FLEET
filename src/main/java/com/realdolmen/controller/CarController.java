@@ -1,6 +1,6 @@
 package com.realdolmen.controller;
 
-import com.realdolmen.util.LoggerProducer;
+import com.realdolmen.util.RedirectEnum;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
@@ -17,8 +17,6 @@ public class CarController {
     @RequestMapping("/")
     public String home() {
         logger.info("foobar");
-        return "index";
+        return RedirectEnum.REDIRECT.INDEX.getUrl();
     }
-
-
 }
