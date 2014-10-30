@@ -4,6 +4,7 @@ import org.apache.commons.dbcp.BasicDataSource;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.support.ReloadableResourceBundleMessageSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
@@ -14,6 +15,8 @@ import org.springframework.validation.beanvalidation.LocalValidatorFactoryBean;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
+import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
+import org.springframework.web.servlet.i18n.SessionLocaleResolver;
 import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.UrlBasedViewResolver;
 import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
@@ -115,5 +118,25 @@ public class ProductionConfig extends WebMvcConfigurerAdapter {
         });
         tilesConfigurer.setCheckRefresh(true);
         return tilesConfigurer;
+    }
+
+    @Bean
+    public ReloadableResourceBundleMessageSource messageSource(){
+        ReloadableResourceBundleMessageSource reloadableResourceBundleMessageSource = new ReloadableResourceBundleMessageSource();
+        reloadableResourceBundleMessageSource.setBasename("classpath:messages");
+        reloadableResourceBundleMessageSource.setDefaultEncoding("UTF-8");
+        return reloadableResourceBundleMessageSource;
+    }
+
+    @Bean
+    public SessionLocaleResolver localeResolver(){
+        return new SessionLocaleResolver();
+    }
+
+    @Bean
+    public LocaleChangeInterceptor interceptor(){
+        LocaleChangeInterceptor interceptor = new LocaleChangeInterceptor();
+        interceptor.setParamName("locale");
+        return interceptor;
     }
 }

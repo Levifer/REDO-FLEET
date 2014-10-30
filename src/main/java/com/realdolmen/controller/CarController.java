@@ -1,19 +1,26 @@
 package com.realdolmen.controller;
 
+import com.realdolmen.util.LoggerProducer;
 import com.realdolmen.util.RedirectEnum;
+import org.slf4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
+
+import java.util.Locale;
 
 /**
  * Created by BPTAT47 on 29/10/2014.
  */
 @Controller
 public class CarController {
+    @LoggerProducer
+    private Logger logger;
 
     @RequestMapping("/")
-    public String home(Model model) {
+    public String home(Model model, Locale locale) {
         model.addAttribute("isLoggedIn",false);
+        logger.info("Locale: " + locale);
         return RedirectEnum.REDIRECT.INDEX.getUrl();
     }
 }
