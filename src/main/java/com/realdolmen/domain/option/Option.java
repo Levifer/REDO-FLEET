@@ -18,9 +18,8 @@ public class Option {
     @GeneratedValue
     @XmlTransient
     private Integer id;
-    @Enumerated(EnumType.STRING)
     @XmlElement
-    private Enums.Type type;
+    private String type;
     @XmlElement
     private String name;
     @XmlElement
@@ -32,18 +31,18 @@ public class Option {
     public Option() {
     }
 
-    public Option(Enums.Type type, String name, String description, BigDecimal price) {
+    public Option(String type, String name, String description, BigDecimal price) {
         this.type = type;
         this.name = name;
         this.description = description;
         this.price = price;
     }
 
-    public Enums.Type getType() {
+    public String getType() {
         return type;
     }
 
-    public void setType(Enums.Type type) {
+    public void setType(String type) {
         this.type = type;
     }
 
