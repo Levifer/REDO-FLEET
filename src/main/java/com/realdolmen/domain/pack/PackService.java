@@ -21,8 +21,7 @@ public class PackService {
         return packRepository.findAll();
     }
 
-    public BigDecimal getPrice(Pack pack){
-        List<Option> options = pack.getOptions();
+    public BigDecimal getPrice(List<Option> options){
         BigDecimal totelPrice = new BigDecimal(0);
         for (Option option : options) {
             totelPrice.add(option.getPrice());
