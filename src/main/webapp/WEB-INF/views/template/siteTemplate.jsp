@@ -35,7 +35,7 @@
             <!-- Body Page -->
             <tiles:insertAttribute name="body" />
         </div>
-        <script type="application/javascript" src="<%=request.getContextPath() %>/resources/js/jquery-2.1.1.min.js"></script>
-        <script type="application/javascript" src="<%=request.getContextPath() %>/resources/js/bootstrap.js"></script>
+        <!--<script type="application/javascript" src="<%=request.getContextPath() %>/resources/js/jquery-2.1.1.min.js"></script>
+        <script type="application/javascript" src="<%=request.getContextPath() %>/resources/js/bootstrap.js"></script>-->
     </body>
 </html>
