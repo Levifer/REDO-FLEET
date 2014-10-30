@@ -1,6 +1,9 @@
-package com.realdolmen.domain;
+package com.realdolmen.domain.carmodel;
 
-import javax.annotation.Generated;
+import com.realdolmen.domain.Enums;
+import com.realdolmen.domain.Pack;
+import com.realdolmen.domain.car.Car;
+
 import javax.persistence.*;
 import java.util.Date;
 import java.util.List;
@@ -9,7 +12,7 @@ import java.util.List;
  * Created by TLAAU71 on 29/10/2014.
  */
 @Entity
-public class Model {
+public class CarModel {
     @Id
     @GeneratedValue
     private Integer id;
@@ -31,10 +34,10 @@ public class Model {
     private Pack pack;
 
 
-    public Model() {
+    public CarModel() {
     }
 
-    public Model(String brand, String type, Enums.Fuel fuelType, Date year, int quarter, int minKm, int maxKm, int deliveryTime, int fiscalHp, int co2, int category, String imageUrl, Pack pack, List<Car> cars) {
+    public CarModel(String brand, String type, Enums.Fuel fuelType, Date year, int quarter, int minKm, int maxKm, int deliveryTime, int fiscalHp, int co2, int category, String imageUrl, Pack pack, List<Car> cars) {
         this.brand = brand;
         this.type = type;
         this.fuelType = fuelType;
@@ -50,7 +53,7 @@ public class Model {
         this.pack = pack;
     }
 
-    public Model(String brand, String type, Enums.Fuel fuelType, Date year, int quarter, Pack pack, int minKm, int maxKm, int deliveryTime, int fiscalHp, int co2, int category) {
+    public CarModel(String brand, String type, Enums.Fuel fuelType, Date year, int quarter, Pack pack, int minKm, int maxKm, int deliveryTime, int fiscalHp, int co2, int category) {
         this.brand = brand;
         this.type = type;
         this.fuelType = fuelType;

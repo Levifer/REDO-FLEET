@@ -1,4 +1,4 @@
-package com.realdolmen.repository;
+package com.realdolmen.domain;
 
 import org.springframework.stereotype.Repository;
 

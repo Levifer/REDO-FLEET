@@ -1,4 +1,6 @@
-package com.realdolmen.domain;
+package com.realdolmen.domain.pack;
+
+import com.realdolmen.domain.option.Option;
 
 import javax.persistence.*;
 import java.math.BigDecimal;

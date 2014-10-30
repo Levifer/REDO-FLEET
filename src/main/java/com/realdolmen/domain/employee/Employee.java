@@ -1,4 +1,7 @@
-package com.realdolmen.domain;
+package com.realdolmen.domain.employee;
+
+import com.realdolmen.domain.Enums;
+import com.realdolmen.domain.car.Car;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.*;

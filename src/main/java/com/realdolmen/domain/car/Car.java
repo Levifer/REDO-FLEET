@@ -1,4 +1,6 @@
-package com.realdolmen.domain;
+package com.realdolmen.domain.car;
+
+import com.realdolmen.domain.Model;
 
 import javax.persistence.*;
 import java.util.Date;

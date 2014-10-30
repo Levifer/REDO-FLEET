@@ -1,4 +1,4 @@
-package com.realdolmen.service;
+package com.realdolmen.domain.car;
 
 import org.springframework.stereotype.Service;
 
