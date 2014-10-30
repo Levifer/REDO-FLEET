@@ -21,6 +21,10 @@ public class PackService {
         return packRepository.findAll();
     }
 
+    public Pack findById(Integer id){
+        return packRepository.find(id);
+    }
+
     public BigDecimal getPrice(List<Option> options){
         BigDecimal totelPrice = new BigDecimal(0);
         for (Option option : options) {
