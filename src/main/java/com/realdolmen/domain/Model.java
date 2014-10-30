@@ -25,6 +25,7 @@ public class Model {
     private int fiscalHp;
     private int co2;
     private int category;
+    private String imageUrl;
 
     @OneToOne
     private Pack pack;
@@ -33,6 +34,23 @@ public class Model {
     private List<Car> cars;
 
     public Model() {
+    }
+
+    public Model(String brand, String type, Enums.Fuel fuelType, Date year, int quarter, int minKm, int maxKm, int deliveryTime, int fiscalHp, int co2, int category, String imageUrl, Pack pack, List<Car> cars) {
+        this.brand = brand;
+        this.type = type;
+        this.fuelType = fuelType;
+        this.year = year;
+        this.quarter = quarter;
+        this.minKm = minKm;
+        this.maxKm = maxKm;
+        this.deliveryTime = deliveryTime;
+        this.fiscalHp = fiscalHp;
+        this.co2 = co2;
+        this.category = category;
+        this.imageUrl = imageUrl;
+        this.pack = pack;
+        this.cars = cars;
     }
 
     public Model(String brand, String type, Enums.Fuel fuelType, Date year, int quarter, Pack pack, int minKm, int maxKm, int deliveryTime, int fiscalHp, int co2, int category) {
@@ -157,5 +175,13 @@ public class Model {
 
     public void setCars(List<Car> cars) {
         this.cars = cars;
+    }
+
+    public String getImageUrl() {
+        return imageUrl;
+    }
+
+    public void setImageUrl(String imageUrl) {
+        this.imageUrl = imageUrl;
     }
 }
