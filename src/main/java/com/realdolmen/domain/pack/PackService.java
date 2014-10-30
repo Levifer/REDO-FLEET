@@ -16,6 +16,11 @@ public class PackService {
     @Autowired
     private PackRepository packRepository;
 
+
+    public List<Pack> findAll(){
+        return packRepository.findAll();
+    }
+
     public BigDecimal getPrice(Pack pack){
         List<Option> options = pack.getOptions();
         BigDecimal totelPrice = new BigDecimal(0);
