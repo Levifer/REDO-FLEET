@@ -7,24 +7,34 @@
         <link type="text/css" href="<%=request.getContextPath() %>/resources/css/style.css" rel="stylesheet"/>
     </head>
     <body>
+        <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">RD Fleet</a>
+                </div>
+                <div id="navbar" class="collapse navbar-collapse">
+                    <ul class="nav navbar-nav">
+                        <!-- Menu Page -->
+                        <tiles:insertAttribute name="menu-left" />
+                    </ul>
+                    <ul class="nav navbar-nav navbar-right">
+                        <!-- Menu Page -->
+                        <tiles:insertAttribute name="menu-right" />
+                    </ul>
+                </div><!--/.nav-collapse -->
+            </div>
+        </nav>
         <div class="container">
-            <!-- Header -->
-            <div class="row">
-                <tiles:insertAttribute name="header" />
-            </div>
-            <!-- Menu Page -->
-            <div class="row">
-                <tiles:insertAttribute name="menu" />
-            </div>
             <!-- Body Page -->
-            <div class="row">
-                <tiles:insertAttribute name="body" />
-            </div>
-            <!-- Footer Page -->
-            <div class="row">
-                <tiles:insertAttribute name="footer" />
-            </div>
+            <tiles:insertAttribute name="body" />
         </div>
+        <script type="application/javascript" src="<%=request.getContextPath() %>/resources/js/jquery-2.1.1.min.js"></script>
         <script type="application/javascript" src="<%=request.getContextPath() %>/resources/js/bootstrap.js"></script>
     </body>
 </html>

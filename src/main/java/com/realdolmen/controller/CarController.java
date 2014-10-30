@@ -2,8 +2,8 @@ package com.realdolmen.controller;
 
 import com.realdolmen.util.LoggerProducer;
 import com.realdolmen.util.RedirectEnum;
-import org.slf4j.Logger;
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 /**
@@ -12,13 +12,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 @Controller
 public class CarController {
 
-    @LoggerProducer
-    private Logger logger;
-
-
     @RequestMapping("/")
-    public String home() {
-        logger.info("foobar");
+    public String home(Model model) {
+        model.addAttribute("isLoggedIn",false);
         return RedirectEnum.REDIRECT.INDEX.getUrl();
     }
 }
