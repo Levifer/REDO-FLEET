@@ -12,6 +12,10 @@
         <link type="text/css" href="<%=request.getContextPath() %>/resources/css/bootstrap.css" rel="stylesheet"/>
     </head>
     <body>
-        <p>Something went wrong...</p>
+        <h1>
+            You seem to have misplaced something...
+        </h1>
+        <p>If you want to, you can look up this HTTP-code: <em>${errorCode}</em>. Good luck!</p>
+        <script type="application/javascript" src="<%=request.getContextPath() %>/resources/js/bootstrap.js"/>
     </body>
 </html>
