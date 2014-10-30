@@ -29,8 +29,6 @@ public class Model {
     @OneToOne
     private Pack pack;
 
-    @OneToMany
-    private List<Car> cars;
 
     public Model() {
     }
@@ -150,12 +148,4 @@ public class Model {
         return id;
     }
 
-    public List<Car> getCars() {
-
-        return cars;
-    }
-
-    public void setCars(List<Car> cars) {
-        this.cars = cars;
-    }
 }
