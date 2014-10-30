@@ -30,8 +30,6 @@ public class Model {
     @OneToOne
     private Pack pack;
 
-    @OneToMany
-    private List<Car> cars;
 
     public Model() {
     }
@@ -50,7 +48,6 @@ public class Model {
         this.category = category;
         this.imageUrl = imageUrl;
         this.pack = pack;
-        this.cars = cars;
     }
 
     public Model(String brand, String type, Enums.Fuel fuelType, Date year, int quarter, Pack pack, int minKm, int maxKm, int deliveryTime, int fiscalHp, int co2, int category) {
@@ -168,15 +165,6 @@ public class Model {
         return id;
     }
 
-    public List<Car> getCars() {
-
-        return cars;
-    }
-
-    public void setCars(List<Car> cars) {
-        this.cars = cars;
-    }
-
     public String getImageUrl() {
         return imageUrl;
     }
@@ -184,4 +172,5 @@ public class Model {
     public void setImageUrl(String imageUrl) {
         this.imageUrl = imageUrl;
     }
+
 }

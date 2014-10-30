@@ -9,8 +9,15 @@
 <html>
     <head>
         <title>Hello</title>
+        <link type="text/css" href="<%=request.getContextPath() %>/resources/css/style.css" rel="stylesheet"/>
     </head>
     <body>
-        <h1>HUZZAH!</h1>
+        <div class="container">
+            <div class="row">
+                <div class="half-width">
+                    <h1>HUZZAH!</h1>
+                </div>
+            </div>
+        </div>
     </body>
 </html>

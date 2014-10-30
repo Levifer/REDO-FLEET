@@ -37,7 +37,7 @@ public class Enums {
 
     public enum Fuel{
         DIESEL("Fuel.Diesel"),
-        Bezine("Fuel.Benzine");
+        BEZINE("Fuel.Benzine");
 
         private final String label;
 
@@ -52,7 +52,8 @@ public class Enums {
 
     public enum Type{
         Interior("Type.Airco"),
-        Exterior("Type.Extrior");
+        Exterior("Type.Extrior"),
+        TECHNICAL("Type.Technical");
 
         private final String label;
 
