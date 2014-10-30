@@ -13,9 +13,10 @@
     </head>
     <body>
         <h1>
-            You seem to have misplaced something...
+            Something went terribly wrong!
         </h1>
-        <p>If you want to, you can look up this HTTP-code: <em>404</em>. Good luck!</p>
+        <p>If you want to, you can look up this HTTP-code: <em>${errorCode}</em>. Good luck!</p>
+        <p>I guess you should go back to the <a href="/">Home page</a></p>
         <script type="application/javascript" src="<%=request.getContextPath() %>/resources/js/bootstrap.js"></script>
     </body>
 </html>

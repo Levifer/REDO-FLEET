@@ -21,6 +21,7 @@ public class Initializer implements WebApplicationInitializer {
 				"dispatcher", new DispatcherServlet(context));
 		dispatcher.setLoadOnStartup(1);
 		dispatcher.addMapping("/");
+        dispatcher.setInitParameter("throwExceptionIfNoHandlerFound","true");
 		
 		servletContext.addFilter("HttpMethodFilter", org.springframework.web.filter.HiddenHttpMethodFilter.class)
 		.addMappingForUrlPatterns(null, false, "/*");
