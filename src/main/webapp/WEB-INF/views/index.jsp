@@ -9,15 +9,18 @@
 <html>
     <head>
         <title>Hello</title>
+        <link type="text/css" href="<%=request.getContextPath() %>/resources/css/bootstrap.css" rel="stylesheet"/>
         <link type="text/css" href="<%=request.getContextPath() %>/resources/css/style.css" rel="stylesheet"/>
     </head>
     <body>
         <div class="container">
             <div class="row">
-                <div class="half-width">
+                <div class="col-md-4 col-md-offset-4">
                     <h1>HUZZAH!</h1>
                 </div>
             </div>
         </div>
+
+        <script type="application/javascript" src="<%=request.getContextPath() %>/resources/js/bootstrap.js"></script>
     </body>
 </html>
