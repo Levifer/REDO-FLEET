@@ -1,7 +1,7 @@
 package com.realdolmen.domain.carmodel;
 
 import com.realdolmen.domain.Enums;
-import com.realdolmen.domain.Pack;
+import com.realdolmen.domain.pack.Pack;
 import com.realdolmen.domain.car.Car;
 
 import javax.persistence.*;

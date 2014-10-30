@@ -1,5 +1,8 @@
 package com.realdolmen.controller;
 
+import com.realdolmen.util.LoggerProducer;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 
@@ -8,8 +11,14 @@ import org.springframework.web.bind.annotation.RequestMapping;
  */
 @Controller
 public class CarController {
+
+    private Logger logger = LoggerFactory.getLogger(this.getClass());
+
     @RequestMapping("/")
     public String home() {
+        logger.info("foobar");
         return "index";
     }
+
+
 }

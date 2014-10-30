@@ -1,6 +1,6 @@
 package com.realdolmen.domain.car;
 
-import com.realdolmen.domain.Model;
+import com.realdolmen.domain.carmodel.CarModel;
 
 import javax.persistence.*;
 import java.util.Date;
@@ -16,7 +16,7 @@ public class Car {
     private Integer id;
 
     @ManyToOne
-    private Model model;
+    private CarModel model;
 
 
     private Integer mileage;
@@ -28,11 +28,11 @@ public class Car {
         return id;
     }
 
-    public Model getModel() {
+    public CarModel getModel() {
         return model;
     }
 
-    public void setModel(Model model) {
+    public void setModel(CarModel model) {
         this.model = model;
     }
 

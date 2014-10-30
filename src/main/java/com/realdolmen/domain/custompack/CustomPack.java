@@ -1,6 +1,6 @@
 package com.realdolmen.domain.custompack;
 
-import com.realdolmen.domain.Option;
+import com.realdolmen.domain.option.Option;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
