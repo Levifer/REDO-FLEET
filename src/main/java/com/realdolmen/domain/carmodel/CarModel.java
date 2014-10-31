@@ -21,10 +21,13 @@ public class CarModel {
     @XmlTransient
     private Integer id;
     @XmlElement
-    private String brand;
+    @Enumerated
+    private Enums.Brand brand;
     @XmlElement
-    private String type;
+    @Enumerated
+    private Enums.CarType type;
     @XmlElement
+    @Enumerated
     private Enums.Fuel fuelType;
     @Temporal(TemporalType.DATE)
     @XmlElement
@@ -54,7 +57,7 @@ public class CarModel {
     public CarModel() {
     }
 
-    public CarModel(String brand, String type, Enums.Fuel fuelType, Date year, int quarter, int minKm, int maxKm, int deliveryTime, int fiscalHp, int co2, int category, String imageUrl, Pack pack) {
+    public CarModel(Enums.Brand brand, Enums.CarType type, Enums.Fuel fuelType, Date year, int quarter, int minKm, int maxKm, int deliveryTime, int fiscalHp, int co2, int category, String imageUrl, Pack pack) {
         this.brand = brand;
         this.type = type;
         this.fuelType = fuelType;
@@ -70,7 +73,7 @@ public class CarModel {
         this.pack = pack;
     }
 
-    public CarModel(String brand, String type, Enums.Fuel fuelType, Date year, int quarter, Pack pack, int minKm, int maxKm, int deliveryTime, int fiscalHp, int co2, int category) {
+    public CarModel(Enums.Brand brand, Enums.CarType type, Enums.Fuel fuelType, Date year, int quarter, Pack pack, int minKm, int maxKm, int deliveryTime, int fiscalHp, int co2, int category) {
         this.brand = brand;
         this.type = type;
         this.fuelType = fuelType;
@@ -85,19 +88,19 @@ public class CarModel {
         this.category = category;
     }
 
-    public String getBrand() {
+    public Enums.Brand getBrand() {
         return brand;
     }
 
-    public void setBrand(String brand) {
+    public void setBrand(Enums.Brand brand) {
         this.brand = brand;
     }
 
-    public String getType() {
+    public Enums.CarType getType() {
         return type;
     }
 
-    public void setType(String type) {
+    public void setType(Enums.CarType type) {
         this.type = type;
     }
 
