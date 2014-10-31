@@ -10,7 +10,7 @@
     <form:form>
         <input type="submit" value="Back" name="_eventId_back"
                class="btn btn-danger" />
-        <input type="submit" value="Log in to order this car!" name="_eventId_login"
-               class="btn btn-warning" />
+        <input type="submit" value="Login!" name="_eventId_login"
+               class="btn btn-primary" />
     </form:form>
 </div>
