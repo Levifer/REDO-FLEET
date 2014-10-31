@@ -44,6 +44,44 @@ public class Enums {
         }
     }
 
+
+    public enum CarType{
+        BERLINE("CarType.Berline"),
+        BREAK("CarType.Break"),
+        COUPE("CarType.Coupe"),
+        HATCHBACK("CarType.Hatchback"),
+        JEEP("CarType.Jeep"),
+        MONOVOLUME("CarType.MONOVOLUME");
+
+
+        private final String label;
+
+        CarType(String label) {
+            this.label = label;
+        }
+
+        public String getLabel() {
+            return label;
+        }
+    }
+
+    public enum Brand{
+        AUDI("Brand.Audi"),
+        VOLKSWAGEN("Brand.Volkswagen"),
+        SEAT("Brand.Seat"),
+        SKODA("Brand.Skoda");
+
+        private final String label;
+
+        Brand(String label) {
+            this.label = label;
+        }
+
+        public String getLabel() {
+            return label;
+        }
+    }
+
     public enum Fuel{
         DIESEL("Fuel.Diesel"),
         BENZINE("Fuel.Benzine");
