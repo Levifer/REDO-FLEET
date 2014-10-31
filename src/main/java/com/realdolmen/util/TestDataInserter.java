@@ -77,7 +77,7 @@ public class TestDataInserter {
     }
 
     public  void insertACarModel(){
-        CarModel carModel = new CarModel("Audi","A3", Enums.Fuel.DIESEL,new Date(),2,140000,180000,20,9,88,2,"",packService.findAll().get(0));
+        CarModel carModel = new CarModel(Enums.Brand.AUDI,Enums.CarType.BERLINE, Enums.Fuel.DIESEL,new Date(),2,140000,180000,20,9,88,2,"",packService.findAll().get(0));
         entityManager.persist(carModel);
         logger.info("/////************************************INSERTING A CARMODEL*************************************/////\"); ");
 
@@ -90,7 +90,7 @@ public class TestDataInserter {
         Pack packRetrievedFromDB = packService.findAll().get(0);
         packRetrievedFromDB.getOptions().add(optionService.findAll().get(5));
         packService.updatePack(packRetrievedFromDB);
-        CarModel carModel2 = new CarModel("Volkswagen","Golf 7 1,6 TDI 105pk/CV Highline", Enums.Fuel.DIESEL,new Date(),2,140000,180000,16,9,99,2,"",packService.findAll().get(0));
+        CarModel carModel2 = new CarModel(Enums.Brand.VOLKSWAGEN,Enums.CarType.BREAK, Enums.Fuel.DIESEL,new Date(),2,140000,180000,16,9,99,2,"",packService.findAll().get(0));
         entityManager.persist(carModel2);
         logger.info("/////************************************INSERTING A SECOND CAR WITH AN UPDATED PACK*************************************/////\"); ");
 
