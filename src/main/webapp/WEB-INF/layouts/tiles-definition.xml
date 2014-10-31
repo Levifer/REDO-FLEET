@@ -10,11 +10,36 @@
 
     <definition name="index" extends="DefaultTemplate">
         <put-attribute name="title" value="Index"/>
-        <put-attribute name="body" value="/WEB-INF/views/index.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/general/index.jsp" />
+    </definition>
+
+    <definition name="login" extends="DefaultTemplate">
+        <put-attribute name="title" value="Login"/>
+        <put-attribute name="body" value="/WEB-INF/views/general/login.jsp" />
     </definition>
 
     <definition name="error" extends="DefaultTemplate">
         <put-attribute name="title" value="Error"/>
-        <put-attribute name="body" value="/WEB-INF/views/error.jsp" />
+        <put-attribute name="body" value="/WEB-INF/views/general/error.jsp" />
+    </definition>
+
+    <definition name="carIndex" extends="DefaultTemplate">
+        <put-attribute name="title" value="Car/Index"/>
+        <put-attribute name="body" value="/WEB-INF/views/car/index.jsp" />
+    </definition>
+
+    <definition name="carList" extends="DefaultTemplate">
+        <put-attribute name="title" value="Car/List"/>
+        <put-attribute name="body" value="/WEB-INF/views/car/list.jsp" />
+    </definition>
+
+    <definition name="carDetail" extends="DefaultTemplate">
+        <put-attribute name="title" value="Car/Detail"/>
+        <put-attribute name="body" value="/WEB-INF/views/car/detail.jsp" />
+    </definition>
+
+    <definition name="carOrder" extends="DefaultTemplate">
+        <put-attribute name="title" value="Car/Order"/>
+        <put-attribute name="body" value="/WEB-INF/views/car/order.jsp" />
     </definition>
 </tiles-definitions>
