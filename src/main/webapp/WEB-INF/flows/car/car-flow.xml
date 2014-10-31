@@ -20,7 +20,7 @@
         <transition on="login" to="login"/>
     </view-state>
 
-    <view-state id="login" view="login" model="car">
+    <view-state id="login" view="carLogin" model="car">
         <transition on="back" to="detail"/>
         <transition on="login" to="order"/>
     </view-state>
