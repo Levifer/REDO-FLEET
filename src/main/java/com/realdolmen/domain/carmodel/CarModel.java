@@ -54,7 +54,7 @@ public class CarModel {
     public CarModel() {
     }
 
-    public CarModel(String brand, String type, Enums.Fuel fuelType, Date year, int quarter, int minKm, int maxKm, int deliveryTime, int fiscalHp, int co2, int category, String imageUrl, Pack pack, List<Car> cars) {
+    public CarModel(String brand, String type, Enums.Fuel fuelType, Date year, int quarter, int minKm, int maxKm, int deliveryTime, int fiscalHp, int co2, int category, String imageUrl, Pack pack) {
         this.brand = brand;
         this.type = type;
         this.fuelType = fuelType;

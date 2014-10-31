@@ -11,6 +11,7 @@ import java.util.List;
  * Created by TLAAU71 on 29/10/2014.
  */
 @Entity
+@Table(name ="FLEET_OPTION")
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement
 public class Option {
@@ -23,6 +24,7 @@ public class Option {
     @XmlElement
     private String name;
     @XmlElement
+    @Column(columnDefinition = "TEXT")
     private String description;
     @XmlElement
     private BigDecimal price;
