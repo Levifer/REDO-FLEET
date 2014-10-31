@@ -77,7 +77,7 @@ public class ProductionConfig extends WebMvcConfigurerAdapter {
 
         // use this to inject additional properties in the EntityManager
         final Properties additionalProperties = new Properties();
-        additionalProperties.setProperty("hibernate.hbm2ddl.auto", "create");
+        additionalProperties.setProperty("hibernate.hbm2ddl.auto", "create-drop");
 
         factoryBean.setJpaVendorAdapter(vendorAdapter);
         factoryBean.setJpaProperties(additionalProperties);

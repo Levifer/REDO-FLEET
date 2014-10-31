@@ -44,14 +44,13 @@ public class Employee {
     public Employee() {
     }
 
-    public Employee(String name, String surname, String email, String password, String employeeNumber, Integer category, List<Car> cars, Enums.Roles roles, Enums.Status status) {
+    public Employee(String name, String surname, String email, String password, String employeeNumber, Integer category,Enums.Roles roles, Enums.Status status) {
         this.name = name;
         this.surname = surname;
         this.email = email;
         this.password = password;
         this.employeeNumber = employeeNumber;
         this.category = category;
-        this.cars = cars;
         this.roles = roles;
         this.status = status;
     }
