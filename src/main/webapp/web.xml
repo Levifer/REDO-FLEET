@@ -10,6 +10,6 @@
 
     <!-- With Servlet 3.0 and above general error page is possible -->
     <error-page>
-        <location>/error</location>
+        <location>/WEB-INF/views/error/layout-error.jsp</location>
     </error-page>
 </web-app>
