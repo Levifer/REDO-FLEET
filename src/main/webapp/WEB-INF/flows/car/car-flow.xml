@@ -16,11 +16,19 @@
 
     <view-state id="detail" view="carDetail" model="car">
         <transition on="back" to="list"/>
-        <transition on="next" to="finish"/>
+        <transition on="next" to="order"/>
         <transition on="login" to="login"/>
     </view-state>
 
-	<end-state id="finish" view="externalRedirect:/"/>
+    <view-state id="login" view="login" model="car">
+        <transition on="back" to="detail"/>
+        <transition on="login" to="order"/>
+    </view-state>
 
-    <end-state id="login" view="externalRedirect:/login"/>
+    <view-state id="order" view="carOrder" model="car">
+        <transition on="back" to="detail"/>
+        <transition on="finish" to="finish"/>
+    </view-state>
+
+    <end-state id="finish" view="externalRedirect:/"/>
 </flow>

@@ -37,4 +37,9 @@
         <put-attribute name="title" value="Car/Detail"/>
         <put-attribute name="body" value="/WEB-INF/views/car/detail.jsp" />
     </definition>
+
+    <definition name="carOrder" extends="DefaultTemplate">
+        <put-attribute name="title" value="Car/Order"/>
+        <put-attribute name="body" value="/WEB-INF/views/car/order.jsp" />
+    </definition>
 </tiles-definitions>
