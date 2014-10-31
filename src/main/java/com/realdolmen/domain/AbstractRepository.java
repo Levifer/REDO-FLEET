@@ -39,6 +39,10 @@ public abstract class AbstractRepository<T> {
         return entityManager.find(returnEntityClass(), id);
     }
 
+    public T update(T entity) {
+        return entityManager.merge(entity);
+    }
+
 
     public void remove(Integer id) {
         entityManager.remove(entityManager.getReference(returnEntityClass(), id));
