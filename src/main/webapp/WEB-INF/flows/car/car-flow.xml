@@ -5,6 +5,7 @@
         http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
 
 	<var name="car" class="com.realdolmen.domain.car.Car"/>
+    <var name="user" class="com.realdolmen.domain.employee.Employee"/>
 	<view-state id="start" view="carIndex" model="car">
 		<transition on="next" to="list"/>
 	</view-state>
@@ -20,10 +21,16 @@
         <transition on="login" to="login"/>
     </view-state>
 
-    <view-state id="login" view="carLogin" model="car">
+    <view-state id="login" view="carLogin" model="user">
         <transition on="back" to="detail"/>
-        <transition on="login" to="order"/>
+        <transition on="login" to="doLogin"/>
     </view-state>
+    
+    <action-state id="doLogin">
+        <evaluate expression="loginController.login(user)" result="conversationScope.loggedIn"/>
+        <transition on="yes" to="order"/>
+        <transition on="no" to="login"/>
+    </action-state>
 
     <view-state id="order" view="carOrder" model="car">
         <transition on="back" to="detail"/>
