@@ -1,6 +1,7 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
+<%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <div class="row">
-    <div class="col-md-12"><h2>Choose!</h2></div>
+    <div class="col-md-12"><h2><spring:message code="car.flowTitle.start"/></h2></div>
 </div>
 <div class="row">
     <div class="col-md-6">
@@ -29,34 +30,43 @@
         <div class="row">
             <div class="col-md-6">
                 <h4>Berline</h4>
-                <img src="<%=request.getContextPath() %>/resources/img/type/berline.jpg" class="img-responsive" alt="berline"/>
+                <img src="<%=request.getContextPath() %>/resources/img/type/berline.png" class="img-responsive" alt="berline"/>
             </div>
             <div class="col-md-6">
                 <h4>Break</h4>
-                <img src="<%=request.getContextPath() %>/resources/img/type/break.jpg" class="img-responsive" alt="break"/>
+                <img src="<%=request.getContextPath() %>/resources/img/type/break.png" class="img-responsive" alt="break"/>
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-6">
                 <h4>Coup&eacute;</h4>
-                <img src="<%=request.getContextPath() %>/resources/img/type/coupe.jpg" class="img-responsive" alt="coupé"/>
+                <img src="<%=request.getContextPath() %>/resources/img/type/coupe.png" class="img-responsive" alt="coupé"/>
             </div>
             <div class="col-md-6">
                 <h4>Hatchback</h4>
-                <img src="<%=request.getContextPath() %>/resources/img/type/hatchback.jpg" class="img-responsive" alt="hatchback"/>
+                <img src="<%=request.getContextPath() %>/resources/img/type/hatchback.png" class="img-responsive" alt="hatchback"/>
             </div>
         </div>
 
         <div class="row">
             <div class="col-md-6">
                 <h4>Jeep</h4>
-                <img src="<%=request.getContextPath() %>/resources/img/type/jeep.jpg" class="img-responsive" alt="jeep"/>
+                <img src="<%=request.getContextPath() %>/resources/img/type/jeep.png" class="img-responsive" alt="jeep"/>
             </div>
             <div class="col-md-6">
                 <h4>Monovolume</h4>
-                <img src="<%=request.getContextPath() %>/resources/img/type/monovolume.jpg" class="img-responsive" alt="monovolume"/>
+                <img src="<%=request.getContextPath() %>/resources/img/type/monovolume.png" class="img-responsive" alt="monovolume"/>
             </div>
         </div>
+
+
     </div>
+
+</div>
+<div class="row">
+    <form:form>
+        <input type="submit" value="Next" name="_eventId_next"
+           class="btn btn-success" />
+    </form:form>
 </div>
