@@ -18,7 +18,6 @@ import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
 import org.springframework.web.servlet.i18n.LocaleChangeInterceptor;
 import org.springframework.web.servlet.i18n.SessionLocaleResolver;
-import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.UrlBasedViewResolver;
 import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
 import org.springframework.web.servlet.view.tiles3.TilesView;
@@ -35,8 +34,9 @@ import java.util.Properties;
 @ImportResource("classpath:/webflow-config.xml")
 public class ProductionConfig extends WebMvcConfigurerAdapter {
     @Bean
-    public InternalResourceViewResolver internalResourceViewResolver() {
-        InternalResourceViewResolver resolver = new InternalResourceViewResolver();
+    public UrlBasedViewResolver viewResolver() {
+        UrlBasedViewResolver resolver = new UrlBasedViewResolver();
+        resolver.setViewClass(TilesView.class);
         resolver.setPrefix("/WEB-INF/views/");
         resolver.setSuffix(".jsp");
         return resolver;

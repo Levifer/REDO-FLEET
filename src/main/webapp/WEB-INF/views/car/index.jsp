@@ -1,7 +1,7 @@
 <%@ taglib uri="http://www.springframework.org/tags" prefix="spring" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <div class="row">
-    <div class="col-md-12"><h2>Choose!</h2></div>
+    <div class="col-md-12"><h2><spring:message code="car.flowTitle.start"/></h2></div>
 </div>
 <div class="row">
     <div class="col-md-6">

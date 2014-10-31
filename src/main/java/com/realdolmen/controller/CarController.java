@@ -18,7 +18,7 @@ public class CarController {
 
     @RequestMapping("/")
     public String home(Model model, Locale locale) {
-        model.addAttribute("isLoggedIn",false);
+        model.addAttribute("isLoggedIn",true);
         logger.info("Locale: " + locale);
         return "redirect:/car";
     }

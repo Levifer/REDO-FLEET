@@ -17,7 +17,10 @@
     <view-state id="detail" view="carDetail" model="car">
         <transition on="back" to="list"/>
         <transition on="next" to="finish"/>
+        <transition on="login" to="login"/>
     </view-state>
 
 	<end-state id="finish" view="externalRedirect:/"/>
+
+    <end-state id="login" view="externalRedirect:/login"/>
 </flow>
