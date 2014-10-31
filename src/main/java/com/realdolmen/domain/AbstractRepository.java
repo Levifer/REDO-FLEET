@@ -19,6 +19,7 @@ public abstract class AbstractRepository<T> {
     protected EntityManager entityManager;
 
     private Class<T> t;
+
     private List<T> tList = new ArrayList<>();
 
     public List<T> findAll() {
