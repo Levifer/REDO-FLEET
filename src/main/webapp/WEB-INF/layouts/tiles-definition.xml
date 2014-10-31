@@ -28,6 +28,11 @@
         <put-attribute name="body" value="/WEB-INF/views/index.jsp" />
     </definition>
 
+    <definition name="carLogin" extends="DefaultTemplate">
+        <put-attribute name="title" value="Car/Login"/>
+        <put-attribute name="body" value="/WEB-INF/views/car/login.jsp" />
+    </definition>
+
     <definition name="carList" extends="DefaultTemplate">
         <put-attribute name="title" value="Car/List"/>
         <put-attribute name="body" value="/WEB-INF/views/car/list.jsp" />
