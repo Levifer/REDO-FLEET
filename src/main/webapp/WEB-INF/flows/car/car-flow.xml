@@ -6,8 +6,18 @@
 
 	<var name="car" class="com.realdolmen.domain.car.Car"/>
 	<view-state id="start" view="carIndex" model="car">
-		<transition on="next" to="finish"/>
+		<transition on="next" to="list"/>
 	</view-state>
+
+    <view-state id="list" view="carList" model="car">
+        <transition on="back" to="start"/>
+        <transition on="next" to="detail"/>
+    </view-state>
+
+    <view-state id="detail" view="carDetail" model="car">
+        <transition on="back" to="list"/>
+        <transition on="next" to="finish"/>
+    </view-state>
 
 	<end-state id="finish" view="externalRedirect:/"/>
 </flow>

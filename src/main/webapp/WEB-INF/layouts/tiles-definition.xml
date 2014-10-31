@@ -22,4 +22,14 @@
         <put-attribute name="title" value="Car/Index"/>
         <put-attribute name="body" value="/WEB-INF/views/car/index.jsp" />
     </definition>
+
+    <definition name="carList" extends="DefaultTemplate">
+        <put-attribute name="title" value="Car/List"/>
+        <put-attribute name="body" value="/WEB-INF/views/car/list.jsp" />
+    </definition>
+
+    <definition name="carDetail" extends="DefaultTemplate">
+        <put-attribute name="title" value="Car/Detail"/>
+        <put-attribute name="body" value="/WEB-INF/views/car/detail.jsp" />
+    </definition>
 </tiles-definitions>

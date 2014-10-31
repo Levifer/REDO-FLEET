@@ -1,7 +1,6 @@
 package com.realdolmen.controller;
 
 import com.realdolmen.util.LoggerProducer;
-import com.realdolmen.util.RedirectEnum;
 import org.slf4j.Logger;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -21,6 +20,6 @@ public class CarController {
     public String home(Model model, Locale locale) {
         model.addAttribute("isLoggedIn",false);
         logger.info("Locale: " + locale);
-        return RedirectEnum.REDIRECT.INDEX.getUrl();
+        return "redirect:/car";
     }
 }
