@@ -4,6 +4,7 @@ import com.realdolmen.domain.carmodel.CarModel;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.*;
+import java.io.Serializable;
 import java.util.Date;
 
 /**
@@ -12,7 +13,7 @@ import java.util.Date;
 @Entity
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement
-public class Car {
+public class Car implements Serializable {
 
     @Id
     @GeneratedValue

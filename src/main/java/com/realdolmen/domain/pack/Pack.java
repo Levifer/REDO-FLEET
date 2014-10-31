@@ -34,6 +34,17 @@ public class Pack {
     public Pack() {
     }
 
+    public Pack(Pack pack, List<Option> options){
+        this.price = pack.price;
+        this.benefitPrice = pack.benefitPrice;
+        this.upgrade = pack.upgrade;
+        this.downgrade = pack.downgrade;
+        this.options = pack.options;
+        for (Option option : options) {
+            this.options.add(option);
+        }
+    }
+
     public Pack(BigDecimal price, BigDecimal benefitPrice, BigDecimal upgrade, BigDecimal downgrade, List<Option> options) {
         this.price = price;
         this.benefitPrice = benefitPrice;

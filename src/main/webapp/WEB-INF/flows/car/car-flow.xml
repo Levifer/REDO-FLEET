@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<flow xmlns="http://www.springframework.org/schema/webflow"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/webflow
+        http://www.springframework.org/schema/webflow/spring-webflow-2.0.xsd">
+
+	<var name="car" class="com.realdolmen.domain.car.Car"/>
+	<view-state id="start" view="carIndex" model="car">
+		<transition on="next" to="list"/>
+	</view-state>
+
+    <view-state id="list" view="carList" model="car">
+        <transition on="back" to="start"/>
+        <transition on="next" to="detail"/>
+    </view-state>
+
+    <view-state id="detail" view="carDetail" model="car">
+        <transition on="back" to="list"/>
+        <transition on="next" to="order"/>
+        <transition on="login" to="login"/>
+    </view-state>
+
+    <view-state id="login" view="login" model="car">
+        <transition on="back" to="detail"/>
+        <transition on="login" to="order"/>
+    </view-state>
+
+    <view-state id="order" view="carOrder" model="car">
+        <transition on="back" to="detail"/>
+        <transition on="finish" to="finish"/>
+    </view-state>
+
+    <end-state id="finish" view="externalRedirect:/"/>
+</flow>

@@ -34,7 +34,7 @@ public class PackService {
     public BigDecimal getPrice(List<Option> options){
         BigDecimal totelPrice = new BigDecimal(0);
         for (Option option : options) {
-            totelPrice.add(option.getPrice());
+            totelPrice = totelPrice.add(option.getPrice());
         }
         return totelPrice.multiply(new BigDecimal(0.9));
     }
