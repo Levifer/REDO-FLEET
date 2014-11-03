@@ -14,9 +14,19 @@ public class CarController {
     @LoggerProducer
     private Logger logger;
 
+    private boolean error = true;
+
     @RequestMapping("/")
     public String home(Model model) {
         model.addAttribute("isLoggedIn",true);
         return "redirect:/car";
+    }
+
+    public boolean isError() {
+        return error;
+    }
+
+    public void setError(boolean error) {
+        this.error = error;
     }
 }

@@ -5,6 +5,7 @@ import com.realdolmen.domain.car.Car;
 
 import javax.persistence.*;
 import javax.xml.bind.annotation.*;
+import java.io.Serializable;
 import java.util.List;
 
 /**
@@ -13,7 +14,7 @@ import java.util.List;
 @Entity
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlRootElement
-public class Employee {
+public class Employee implements Serializable {
 
     @Id
     @GeneratedValue

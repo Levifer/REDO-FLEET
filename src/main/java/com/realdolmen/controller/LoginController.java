@@ -1,5 +1,6 @@
 package com.realdolmen.controller;
 
+import com.realdolmen.domain.employee.Employee;
 import com.realdolmen.util.LoggerProducer;
 import org.slf4j.Logger;
 import org.springframework.stereotype.Controller;
@@ -21,4 +22,14 @@ public class LoginController {
         model.addAttribute("isLoggedIn",false);
         return "login";
     }
+
+    public String login(Employee employee){
+        logger.info("Employee:" + employee.getEmail());
+        if(!employee.getEmail().isEmpty() && !employee.getPassword().isEmpty() && employee.getEmail().endsWith("@realdolmen.com")){
+            return "yes";
+        }else{
+            return "no";
+        }
+    }
+
 }
